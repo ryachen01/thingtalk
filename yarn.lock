@@ -403,32 +403,32 @@ cross-spawn@^6.0.5:
     shebang-command "^1.2.0"
     which "^1.2.9"
 
-csv-generate@^3.1.0:
+csv-generate@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/csv-generate/-/csv-generate-3.2.0.tgz#17c0defbad71bfe63182cd3c41c972138ce0b300"
   integrity sha512-ZdS2KrgoLxm1guL9XhuaZX223Tiorldvl9QC0M/gihcrJavNDokAp/rX3CyyRHpK+rImxEE3L47cHe7npQMkkg==
 
-csv-parse@^4.0.1:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-4.1.0.tgz#54a3bc22ee11d21d3a91a068d5651b07c5126df0"
-  integrity sha512-aRjITEJY05VdMPgdTx0P5vgV6uuJSrPZoa3lsXggQtwbjQJJnGfQe220okcdHZlpZvicM1vnYUEuc8dq0cyJXA==
+csv-parse@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-4.3.0.tgz#e27cc1c4c5426201a896389c9f97273a0d47dad4"
+  integrity sha512-vrZTSMG/6a5EI30ICFU8IQ1kR3xXXoC3Z7jaUv76E5uCgFahr2sffRoTAffvEd1JZNssAgalI4DaEFUnXqQCGw==
 
-csv-stringify@^5.0.0:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/csv-stringify/-/csv-stringify-5.1.1.tgz#3989b8fc40b6cf12d2808529c86ca0fde019f560"
-  integrity sha512-QWD7SS9eLWolYlpRzwmhjSBBM0DM415dDyslRvENx5aSPK1oS2M7ynLLDyku9ziPTecfvEQAu6dp2wnz2jCy4Q==
+csv-stringify@^5.1.2:
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/csv-stringify/-/csv-stringify-5.1.2.tgz#0c594ff13f3ae30d40348805eeb0d1f4faf1d9c2"
+  integrity sha512-rvNEMy8IwVe/gnCjnF4a/3cxKPm8oaAZEBB8RIzlx9HcNrLrn3NlgacUIFZBRH86tKF76WVA13nkFF0mX7G2EQ==
   dependencies:
     lodash.get "~4.4.2"
 
-csv@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/csv/-/csv-5.0.0.tgz#96d532a997ae036ef9cef6b325438e18aa89deae"
-  integrity sha512-dYY1CpVmG9J8RGKzVsoemiHHzI2arUkIKt++flgw+zyrh7ohpWob8zYNWWxkmYKJsRjK65iijS1ONMRk6o6q6A==
+csv@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/csv/-/csv-5.1.1.tgz#bd715f15a4ed9141309a24ec6dab1c903ab79f92"
+  integrity sha512-gezB9D+enrh2tLj+vsAD8JyYRMIJdSMpec/Pgbb+7YRj6Q6/D12HLSwjhx+CrirRT4dESjZYXWX1JfqlV4RlTA==
   dependencies:
-    csv-generate "^3.1.0"
-    csv-parse "^4.0.1"
-    csv-stringify "^5.0.0"
-    stream-transform "^1.0.7"
+    csv-generate "^3.2.0"
+    csv-parse "^4.3.0"
+    csv-stringify "^5.1.2"
+    stream-transform "^1.0.8"
 
 dashdash@^1.12.0:
   version "1.14.1"
@@ -1728,7 +1728,7 @@ sshpk@^1.7.0:
     safer-buffer "^2.0.2"
     tweetnacl "~0.14.0"
 
-stream-transform@^1.0.7:
+stream-transform@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/stream-transform/-/stream-transform-1.0.8.tgz#54f721122d310eca855a16c97939881ab5bbb76c"
   integrity sha512-1q+dL790Ps0NV33rISMq9OLtfDA9KMJZdo1PHZXE85orrWsM4FAh8CVyAOTHO0rhyeM138KNPngBPrx33bFsxw==
