@@ -902,3 +902,10 @@ abstract class @com.foo {
 ====
 
 timer(base=makeDate(), interval=30s) => @org.thingpedia.builtin.thingengine.builtin.get_random_between(low=2, high=20) => notify;
+
+====
+
+dataset @com.github language 'en' {
+  stream (p :Entity(tt:path_name), u: Entity(tt:username))  := monitor (@com.github.get_pull_requests(repo_name=p)), contains(reviewers, u)
+  #_[utterances=["review request for $u in repo $p"]];
+}

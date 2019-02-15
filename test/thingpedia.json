@@ -2915,6 +2915,62 @@
                         ""
                     ]
                 },
+                "get_pull_requests": {
+                    "schema": [
+                        "Entity(tt:path_name)",
+                        "String",
+                        "String",
+                        "Date",
+                        "Array(Entity(tt:username))",
+                        "Entity(tt:url)"
+                    ],
+                    "args": [
+                        "repo_name",
+                        "title",
+                        "body",
+                        "time",
+                        "reviewers",
+                        "url"
+                    ],
+                    "required": [
+                        true,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false
+                    ],
+                    "is_input": [
+                        true,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false
+                    ],
+                    "is_list": true,
+                    "is_monitorable": true,
+                    "confirmation": "pull request of repository $repo_name on Github",
+                    "confirmation_remote": "pull requests of repository $repo_name on $__person's Github",
+                    "doc": "pull requests",
+                    "canonical": "pull requests on github",
+                    "argcanonicals": [
+                        "repo name",
+                        "title",
+                        "body",
+                        "time",
+                        "reviewers",
+                        "url"
+                    ],
+                    "questions": [
+                        "What repository do you want to watch?",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ]
+                },
                 "get_issue": {
                     "schema": [
                         "Entity(tt:path_name)",
