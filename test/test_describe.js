@@ -147,7 +147,7 @@ var TEST_CASES = [
     'Twitter ⇒ Twitter'],
 
     ['now => @uk.co.thedogapi.get() => notify;',
-    'get get dog pictures and then notify you', 'Thedogapi ⇒ Notification'],
+    'get dog pictures and then notify you', 'Thedogapi ⇒ Notification'],
 
     ['now => @org.thingpedia.builtin.thingengine.phone.sms() => notify;',
     'get your SMS and then notify you', 'Phone ⇒ Notification'],
@@ -162,7 +162,7 @@ var TEST_CASES = [
     'Bing ⇒ Yandex Translate ⇒ Notification'],
 
     [`monitor @com.yahoo.finance.get_stock_quote(stock_id="goog"^^tt:stock_id("Alphabet, Inc.")), ask_price >= makeCurrency(100, usd) => notify;`,
-    'notify you when the stock price of Alphabet, Inc. change if the ask price is greater than or equal to $100.00',
+    'notify you when the stock price of Alphabet, Inc. changes if the ask price is greater than or equal to $100.00',
     'Yahoo Finance ⇒ Notification'],
 
     [`now => [ask_price] of @com.yahoo.finance.get_stock_quote(stock_id="goog"^^tt:stock_id("Alphabet, Inc.")) => notify;`,
@@ -275,6 +275,7 @@ var TEST_CASES = [
     '42', ''],
 
     [`bookkeeping(choice(0));`,
+<<<<<<< HEAD
     'choice number 1', ''],
 
     [`now => result(@com.thecatapi.get) => notify;`,
@@ -288,6 +289,9 @@ var TEST_CASES = [
 
     [`now => result(@com.thecatapi.get[-2]) => notify;`,
     'get the 2-th last cat picture and then notify you', 'Thecatapi ⇒ Notification'],
+=======
+    'choice number 1', '']
+>>>>>>> d7f77cab43dd869457f8ffab7b03ae96757e54f3
 ];
 
 const gettext = {
