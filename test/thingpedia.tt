@@ -1596,14 +1596,15 @@ class @com.spotify
 }
 class @org.wikidatasportsskill
 #_[canonical="wikidata sports"] {
-  list query athletes(out P18: Array(Entity(tt:picture)) #_[canonical="image"],
+  list query athlete(
+                      out P18: Array(Entity(tt:picture)) #_[canonical="image"],
                       out P19: String #_[canonical="place of birth"] #[string_values="org.wikidata:place_of_birth"],
                       out P20: String #_[canonical="place of death"] #[string_values="org.wikidata:place_of_death"],
                       out P21: Enum(male,female,transgender_female,intersex,transgender_male) #_[canonical="sex or gender"],
                       out P27: Array(Entity(org.wikidatasportsskill:country)) #_[canonical="country of citizenship"],
                       out P69: Array(Entity(org.wikidatasportsskill:educated_at)) #_[canonical="educated at"],
                       out P119: String #_[canonical="place of burial"] #[string_values="org.wikidata:place_of_burial"],
-                      out P166: Array(Entity(org.wikidatasportsskill:award_received)) #_[canonical="award received"],
+                      out P166: Entity(org.wikidatasportsskill:award_received) #_[canonical="award received"],
                       out P213: Entity(org.wikidatasportsskill:isni) #_[canonical="isni"],
                       out P214: Entity(org.wikidatasportsskill:viaf_id) #_[canonical="viaf id"],
                       out P227: Entity(org.wikidatasportsskill:gnd_id) #_[canonical="gnd id"],
@@ -1667,9 +1668,10 @@ class @org.wikidatasportsskill
                       out P6543: Number #_[canonical="total shots in career"],
                       out P6547: Number #_[canonical="career plus-minus rating"],
                       out P3957: Entity(org.wikidatasportsskill:realgm_basketball_player_id) #_[canonical="realgm basketball player id"],
-                      out athletes: Entity(org.wikidatasportsskill:athletes) #_[canonical="athletes"])
-  #_[canonical="wikidata athletes"]
-  #_[confirmation="wikidata athletes"];
+                      out athlete: Entity(org.wikidatasportsskill:athletes) #_[canonical="athlete"])
+  #_[canonical="wikidata athlete"]
+  #_[confirmation="wikidata athlete"]
+  #[default_projection=['athlete']];
 
   list query sports(out P18: Array(Entity(tt:picture)) #_[canonical="image"],
                     out P227: Entity(org.wikidatasportsskill:gnd_id) #_[canonical="gnd id"],

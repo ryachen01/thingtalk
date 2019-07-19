@@ -19,23 +19,19 @@ const _schemaRetriever = new SchemaRetriever(
 async function main() {
   const code = [
     `
-    // Filter for person who was born on April 24, 1452 and died on December 14, 1799
-    now => [person, P18] of @org.wikidata.person(), P569 == makeDate(1732, 2, 22) && P570 == makeDate(1799, 12, 14) => notify;
+    // Filter for person whose first name is Stephen and last name Curry
+    now => [athlete] of @org.wikidatasportsskill.athlete(), P735 == "Stephen" && P734 == "Curry" => notify;
     `,
     `
-    // Filter for person who worked at Apple, Pixar, and Next
-    now => [person, P18] of @org.wikidata.person(), P108 == ["Apple", "Pixar", "NeXT Computer, Inc."] => notify;
+    // Filter for person who was drafted by the cavs and won the MVP award
+    now => [athlete] of @org.wikidatasportsskill.athlete(), P647 == "Cleveland Cavaliers" && P166 == "NBA Most Valuable Player Award" => notify;
     `,
     `
-    // Filter for person whose first name is Stephen and has 3 kids
-    now => [person, P18] of @org.wikidata.person(), P735 == "Stephen" && P1971 == 3=> notify;
-    `,
-    `
-    // Filter for person whose first name is Stephen and has 3 kids
-    now => [person, P18] of @org.wikidata.person(), P735 == "Stephen" && P1971 == 3=> notify;
+    // Filter for person who has played for the
+    now => [athlete] of @org.wikidatasportsskill.athlete(), P54 == ["LAL"^^org.wikidatasportsskill:sports_teams("Los Angeles Lakers"), "GSW"^^org.wikidatasportsskill:sports_teams("Golden State Warriors")] => notify;
     `
   ];
-  const answers = ["George Washington", "Steve Jobs", "Stephen Curry"];
+  const answers = ["Stephen Curry", "LeBron James", "Wilt Chamberlain"];
 
   Promise.all(
     code.map((code) => {
@@ -43,6 +39,7 @@ async function main() {
         code = code.trim();
         AppGrammar.parseAndTypecheck(code, _schemaRetriever).then((program) => {
           const sparqlQuery = SparqlConverter.program_to_sparql(program);
+
           SparqlQuery.query(sparqlQuery).then((response) => {
             let query_output =
               response["results"]["bindings"][0]["personLabel"]["value"];
