@@ -1604,7 +1604,7 @@ class @org.wikidatasportsskill
                       out P27: Array(Entity(org.wikidatasportsskill:country)) #_[canonical="country of citizenship"],
                       out P69: Array(Entity(org.wikidatasportsskill:educated_at)) #_[canonical="educated at"],
                       out P119: String #_[canonical="place of burial"] #[string_values="org.wikidata:place_of_burial"],
-                      out P166: Entity(org.wikidatasportsskill:award_received) #_[canonical="award received"],
+                      out P166: Array(Entity(org.wikidatasportsskill:award_received)) #_[canonical="award received"],
                       out P213: Entity(org.wikidatasportsskill:isni) #_[canonical="isni"],
                       out P214: Entity(org.wikidatasportsskill:viaf_id) #_[canonical="viaf id"],
                       out P227: Entity(org.wikidatasportsskill:gnd_id) #_[canonical="gnd id"],
@@ -1693,8 +1693,7 @@ class @org.wikidatasportsskill
   #_[canonical="wikidata sports data"]
   #_[confirmation="wikidata sports"];
 
-  list query sports_teams(out P17: Array(Entity(org.wikidatasportsskill:country)) #_[canonical="country"],
-                          out P571: Date #_[canonical="inception"],
+  list query sports_team(out P17: Array(Entity(org.wikidatasportsskill:country)) #_[canonical="country"],
                           out P2002: Array(String) #_[canonical="twitter username"] #[string_values="org.wikidata:Twitter_username"],
                           out P641: Array(Entity(org.wikidatasportsskill:sports)) #_[canonical="sport"],
                           out P2416: Array(Entity(org.wikidatasportsskill:sports_discipline_competed_in)) #_[canonical="sports discipline competed in"],
@@ -1706,7 +1705,10 @@ class @org.wikidatasportsskill
                           out P2094: Array(Entity(org.wikidatasportsskill:competition_class)) #_[canonical="competition class"],
                           out P115: Array(Entity(org.wikidatasportsskill:home_venue)) #_[canonical="home venue"],
                           out P3022: Array(Entity(org.wikidata:human)) #_[canonical="flag bearer"],
-                          out sports_teams: Entity(org.wikidatasportsskill:sports_teams) #_[canonical="sports teams"])
-  #_[canonical="wikidata sports teams"]
-  #_[confirmation="wikidata sports teams"];
+                          out P166: Array(Entity(org.wikidatasportsskill:award_received)) #_[canonical="award received"],
+                          out P286: Entity(org.wikidata:human) #_[canonical="head coach"],
+                          out sports_team: Entity(org.wikidatasportsskill:sports_teams) #_[canonical="sports teams"])
+  #_[canonical="wikidata sports team"]
+  #_[confirmation="wikidata sports team"]
+  #[default_projection=['sports_team']];
 }
